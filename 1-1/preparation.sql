@@ -1,15 +1,14 @@
 CREATE SCHEMA `exercises` DEFAULT CHARACTER SET utf8 ;
 
 CREATE TABLE `exercises`.`greatests` (
-  `key` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `x` INT NULL,
   `y` INT NULL,
   `z` INT NULL,
-  PRIMARY KEY (`key`),
-  UNIQUE INDEX `key_UNIQUE` (`key` ASC));
+  PRIMARY KEY (`id`));
 
 INSERT INTO `exercises`.`greatests`
-(`key`,
+(`id`,
 `x`,
 `y`,
 `z`)
