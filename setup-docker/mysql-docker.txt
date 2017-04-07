@@ -1,0 +1,17 @@
+# devというマシーンを作る
+docker-machine create --driver virtualbox dev
+
+#接続
+docker-machine ssh dev
+#もしくは、シェルが使えるように、マウント的に接続
+eval "$(docker-machine env dev)"
+
+#mysqlのイメージを取得
+docker pull mysql
+
+#実行
+docker run --rm --name mysql -e MYSQL_ROOT_PASSWORD=mysql -d -p 33
+06:3306 mysql
+
+#ipアドレスを確認し、mysql workbenchで接続
+docker-machine ip dev
