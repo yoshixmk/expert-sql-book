@@ -1,6 +1,9 @@
 # devというマシーンを作る
 docker-machine create --driver virtualbox dev
 
+# 起動
+docker-machine start dev
+
 #接続
 docker-machine ssh dev
 #もしくは、シェルが使えるように、マウント的に接続
